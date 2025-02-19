@@ -5,49 +5,19 @@ import React, { useEffect } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 const List = ({data}) => {
-    useEffect(() => {
-        document.querySelectorAll(".text-effect").forEach((element) => {
-            Array.from(element.children).forEach((child) => {
-                let clutter = "";
-                child.textContent.split("").forEach((letter) => {
-                    clutter += `<span>${letter === " " ? "&nbsp;" : letter}</span>`;
-                });
-                child.innerHTML = clutter;
-            });
-        });
-    }, []);
 
-    useEffect(() => {
-        document.querySelectorAll(".text-effect").forEach((element) => {
-            element.addEventListener("mouseenter", function () {
-                gsap.fromTo(element.children[0].querySelectorAll("span"), {
-                    y: "0%",
-                }, {
-                    y: "-100%",
-                    stagger: {
-                        amount: .1
-                    }
-                })
-
-                gsap.fromTo(element.children[1].querySelectorAll("span"), {
-                    y: "0%",
-                }, {
-                    y: "-100%",
-                    stagger: {
-                        amount: .1
-                    }
-                })
-
-            });
-        });
-
-        return () => {
-            document.querySelectorAll(".text-effect").forEach((element) => {
-                element.removeEventListener("mouseenter", this);
-            });
-        };
-    }, []);
-
+    useEffect(()=>{
+        gsap.fromTo(document.querySelectorAll("li"),{
+            opacity:0,
+            y:20,
+        },{
+            opacity:1,
+            y:0,
+            stagger:{
+                amount:0.3,
+            }
+        })
+    },[])
 
     return (
         <div>

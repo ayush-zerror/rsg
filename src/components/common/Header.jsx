@@ -1,12 +1,9 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({headerRef}) => {
   return (
-    <header>
-      <hr />
-      <hr />
+    <header ref={headerRef}>
       <h1> RSG Conglomeration</h1>
-        <hr />
         <hr />
     </header>
   )
