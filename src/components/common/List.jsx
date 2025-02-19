@@ -24,7 +24,7 @@ const List = ({data}) => {
             <ul className='list'>
             {data.map((year) => (
                     <li key={year}>
-                        <span className='dot'></span>
+                        <span className='dot'><i class="ri-arrow-right-line"></i></span>
                         <Link href="/">{year}</Link>
                     </li>
                 ))}
