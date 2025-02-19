@@ -5,7 +5,7 @@ import ListContainer from './ListContainer'
 
 const HomeWrapper = () => {
   return (
-    <div className='Wrapper'>
+    <div className='inner-wrapper'>
         <Header/>
         <TextContainer/>
         <ListContainer/>

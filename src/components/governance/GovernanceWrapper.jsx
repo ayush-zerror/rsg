@@ -6,7 +6,7 @@ import List from '../common/List'
 const GovernanceWrapper = () => {
     const data = ["Officers & Directors", "Constitution"]
     return (
-        <div className='Wrapper'>
+        <div className='inner-wrapper'>
             <Header />
             <List data={data}/>
         </div>

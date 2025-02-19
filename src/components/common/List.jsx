@@ -55,12 +55,7 @@ const List = ({data}) => {
             {data.map((year) => (
                     <li key={year}>
                         <span className='dot'></span>
-                        <Link href="/">
-                            <div className='text-effect'>
-                                <p>{year}</p>
-                                <p>{year}</p>
-                            </div>
-                        </Link>
+                        <Link href="/">{year}</Link>
                     </li>
                 ))}
             </ul>
